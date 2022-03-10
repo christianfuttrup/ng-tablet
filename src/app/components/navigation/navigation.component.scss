@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	background: lightgrey;
+	height: 100%;
+	width: 100%;
+}
+
+.application-list {
+	display: flex;
+	flex-direction: row;
+	padding: 5%;
+
+	.application {
+		margin-right: 70px;
+		text-align: center;
+
+		.icon {
+			font-size: 4em;
+		}
+
+		.app-name {
+			display: block;
+			font-size: bold;
+			margin-top: 0.5em;
+		}
+	}
+}
+
+.application:hover {
+	cursor: pointer;
+
+	i {
+		color: red;
+	}
+}

@@ -1,0 +1,20 @@
+.tablet {
+    position: relative;
+    background: url('./../assets/img/tablet-frame.png'); 
+    margin: auto;
+    height: 977px;
+    width: 1450px;
+}
+
+.views {
+    display: flex;
+    position: absolute;
+    top: 88px;
+    left: 86px;
+    bottom: 88px;
+    right: 84px;
+
+    div {
+        width: 100%;
+    }
+}

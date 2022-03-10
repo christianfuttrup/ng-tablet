@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { TabletService } from './services/tablet.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-tablet';
+	constructor(private tabletService: TabletService) {}
+
+	public view = 'navigation';
+
+	public updateView(view: string) {
+		this.view = view;
+	}
 }
