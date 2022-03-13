@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 // UI Modules
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -24,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
 		BrowserAnimationsModule,
 		MatToolbarModule,
 		MatIconModule,
+		MatTableModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
