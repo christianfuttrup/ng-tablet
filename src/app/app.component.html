@@ -16,7 +16,10 @@
 	<body>
 		<div class="tablet">
 			<div class="container" [ngSwitch]="view">
-				<app-header [view]="header"></app-header>
+				<app-header
+					[view]="header"
+					(viewBack)="backFromApp($event)"
+				></app-header>
 				<div class="application-list">
 					<div>
 						<div

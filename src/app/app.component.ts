@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { HeaderComponent } from './shared/header/header.component';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
@@ -14,6 +15,10 @@ export class AppComponent {
 	public switchView(view: string, header: string): void {
 		this.view = view;
 		this.header = header;
+	}
+
+	public backFromApp(backTo: string): void {
+		this.view = backTo;
 	}
 
 	public applications: Array<IApplication> = [
