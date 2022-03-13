@@ -9,6 +9,7 @@ import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 export class AppComponent {
 	constructor() {}
 
+	public show: boolean = true;
 	public view = 'navigation';
 	public header: string = '';
 
@@ -17,10 +18,18 @@ export class AppComponent {
 		this.header = header;
 	}
 
+	/** Go back to main screen from app */
 	public backFromApp(backTo: string): void {
 		this.view = backTo;
 	}
 
+	/** Hide tablet and reset view to main screen */
+	public hideTablet(hide: boolean): void {
+		this.show = hide;
+		this.view = 'navigation';
+	}
+
+	/** Array of applications available with metadata */
 	public applications: Array<IApplication> = [
 		{
 			name: 'Dark web',
@@ -28,6 +37,11 @@ export class AppComponent {
 			link: 'darkweb',
 		},
 		{ name: 'Racing', icon: 'fas fa-flag-checkered', link: 'racing' },
+		{
+			name: 'News',
+			icon: 'far fa-newspaper',
+			link: 'news',
+		},
 	];
 }
 /**

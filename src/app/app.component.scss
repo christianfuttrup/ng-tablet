@@ -1,3 +1,11 @@
+.hide {
+	display: none;
+}
+
+.show {
+	display: "block";
+}
+
 .tablet {
 	position: relative;
 	background: url("./../assets/img/tablet-frame.png") no-repeat;
@@ -13,12 +21,12 @@
 		right: 83px;
 		bottom: 88px;
 
-		.application-list {
-			display: flex;
-			flex-direction: row;
+		.tablet-container {
+			width: 100%;
 
 			.view {
 				display: flex;
+				flex-direction: row;
 
 				&.navigation {
 					padding: 50px;
@@ -28,11 +36,10 @@
 			.application {
 				margin-right: 70px;
 				text-align: center;
-				border: 1px solid blue;
 
 				& i:hover {
-					color: red;
 					cursor: pointer;
+					color: #e91e63;
 				}
 
 				.icon {

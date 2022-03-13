@@ -14,14 +14,15 @@
 		<title>Tablet</title>
 	</head>
 	<body>
-		<div class="tablet">
+		<div class="tablet" [class]="show ? 'show' : 'hide'">
 			<div class="container" [ngSwitch]="view">
 				<app-header
 					[view]="header"
 					(viewBack)="backFromApp($event)"
+					(closeButton)="hideTablet($event)"
 				></app-header>
-				<div class="application-list">
-					<div>
+				<div>
+					<div class="tablet-container">
 						<div
 							class="view navigation"
 							*ngSwitchCase="'navigation'"
