@@ -1,4 +1,3 @@
-import { TabletService } from './services/tablet.service';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,11 +6,30 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	constructor(private tabletService: TabletService) {}
+	constructor() {}
 
 	public view = 'navigation';
+	public header: string = '';
 
-	public updateView(view: string) {
+	public switchView(view: string, header: string): void {
 		this.view = view;
+		this.header = header;
 	}
+
+	public applications: Array<IApplication> = [
+		{
+			name: 'Dark web',
+			icon: 'fas fa-globe-europe',
+			link: 'darkweb',
+		},
+		{ name: 'Racing', icon: 'fas fa-flag-checkered', link: 'racing' },
+	];
+}
+/**
+ * @interface IApplication
+ */
+interface IApplication {
+	name: string;
+	icon: string;
+	link: string;
 }

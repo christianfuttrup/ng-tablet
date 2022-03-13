@@ -1,20 +1,50 @@
 .tablet {
-    position: relative;
-    background: url('./../assets/img/tablet-frame.png'); 
-    margin: auto;
-    height: 977px;
-    width: 1450px;
-}
+	position: relative;
+	background: url("./../assets/img/tablet-frame.png") no-repeat;
+	margin: auto;
+	height: 977px;
+	width: 1450px;
 
-.views {
-    display: flex;
-    position: absolute;
-    top: 88px;
-    left: 86px;
-    bottom: 88px;
-    right: 84px;
+	.container {
+		position: absolute;
+		background: lightgrey;
+		top: 88px;
+		left: 83px;
+		right: 83px;
+		bottom: 88px;
 
-    div {
-        width: 100%;
-    }
+		.application-list {
+			display: flex;
+			flex-direction: row;
+
+			.view {
+				display: flex;
+
+				&.navigation {
+					padding: 50px;
+				}
+			}
+
+			.application {
+				margin-right: 70px;
+				text-align: center;
+				border: 1px solid blue;
+
+				& i:hover {
+					color: red;
+					cursor: pointer;
+				}
+
+				.icon {
+					font-size: 4em;
+				}
+
+				.app-name {
+					display: block;
+					font-size: bold;
+					margin-top: 0.5em;
+				}
+			}
+		}
+	}
 }

@@ -15,14 +15,45 @@
 	</head>
 	<body>
 		<div class="tablet">
-			<div class="views" [ngSwitch]="view">
-				<div class="navigation" *ngSwitchCase="'navigation'">
-					<app-navigation></app-navigation>
+			<div class="container" [ngSwitch]="view">
+				<app-header [view]="header"></app-header>
+				<div class="application-list">
+					<div>
+						<div
+							class="view navigation"
+							*ngSwitchCase="'navigation'"
+						>
+							<div
+								class="application"
+								*ngFor="let application of applications"
+							>
+								<div
+									(click)="
+										switchView(
+											application.link,
+											application.name
+										)
+									"
+								>
+									<i
+										[class]="application.icon"
+										class="icon"
+									></i>
+									<br />
+									<span class="app-name"
+										>{{ application.name }}
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="view" *ngSwitchCase="'darkweb'">
+							<app-darkweb></app-darkweb>
+						</div>
+						<div class="view" *ngSwitchCase="'racing'">
+							<app-racing></app-racing>
+						</div>
+					</div>
 				</div>
-
-				<div class="darkweb" *ngSwitchCase="'darkweb'"></div>
-
-				<div class="racing" *ngSwitchCase="'racing'">Racing app</div>
 			</div>
 		</div>
 	</body>
