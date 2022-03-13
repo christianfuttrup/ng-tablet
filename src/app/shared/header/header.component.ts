@@ -13,13 +13,17 @@ export class HeaderComponent implements OnInit {
 	}
 
 	@Output() viewBack = new EventEmitter<string>();
+	@Output() closeButton = new EventEmitter<boolean>();
 
 	@Input()
 	public view: string = '';
 
 	public backToNavigation(): void {
 		this.viewBack.emit('navigation');
+		this.view = 'Navigation';
 	}
 
-	public closeTablet(): void {}
+	public closeTablet(): void {
+		this.closeButton.emit(false);
+	}
 }

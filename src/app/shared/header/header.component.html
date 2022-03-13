@@ -1,19 +1,16 @@
 <mat-toolbar>
-	<mat-toolbar-row>
-		<mat-icon
-			(click)="backToNavigation()"
-			class="back-icon"
-			*ngIf="view !== 'Navigation'"
-			>arrow_back</mat-icon
-		>
-		<span>{{ view }}</span>
-		<span class="example-spacer"></span>
-		<mat-icon
-			(click)="closeTablet()"
-			class="close-icon"
-			aria-hidden="false"
-			aria-label="Close tablet"
-			>close</mat-icon
-		>
-	</mat-toolbar-row>
+	<mat-icon
+		(click)="backToNavigation()"
+		class="back-icon"
+		*ngIf="view !== 'Navigation'"
+		>arrow_back</mat-icon
+	>
+	<span class="example-spacer"></span>
+	<mat-icon
+		(click)="closeTablet()"
+		class="close-icon"
+		aria-hidden="false"
+		aria-label="Close tablet"
+		>close</mat-icon
+	>
 </mat-toolbar>
